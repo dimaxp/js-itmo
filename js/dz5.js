@@ -1,4 +1,7 @@
 'use strict';
+//Задача 1
+
+
 let pole = document.getElementById("pole")
 
 let n = 4;
@@ -18,30 +21,12 @@ let div = document.createElement("div");
 
 
 
-/*
-let chasiki = {
-    poshli : function () {
-        let date = new Date();
-        let hours = date.getHours();
-        let minute = (date.getMinutes() >= 10) ? date.getMinutes() : +('0' + date.getMinutes());
-        let seconds = date.getSeconds();
-        let go = hours+':'+minute+':'+seconds;
-        //return go;
-
-
-
-    }
-
-}
-*/
 
 
 
 
 
-
-
-
+//Задача 2
 
 setInterval(function () {
     let date = new Date();
@@ -57,11 +42,13 @@ setInterval(function () {
     tik.appendChild(text);
     chasiki.appendChild(tik).classList.add('tik');;
 
-    // console.log(go);
 }, 1000);
 
 
 
+
+
+//Задача 3
 
 let users = createUserArr();//  данные для вывода в таблицу
 function createUserArr() {
@@ -84,15 +71,14 @@ console.log(users[0].id);
 
 for (let i = 0; i < users.length; i++){
 
-    let mytable = document.querySelector("#mytable > tbody");
-    let tr = document.createElement("tr");
+let mytable = document.querySelector("#mytable > tbody");
+let tr = document.createElement("tr");
 let myobb = users[i];
 
     for (let s in myobb) {
         let textmy = document.createTextNode(myobb[s]);
         let td = document.createElement("td");
         td.appendChild(textmy);
-        console.log(myobb[s]);
         tr.appendChild(td);
 
     }
